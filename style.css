@@ -162,6 +162,18 @@ section h2 {
 }
 
 
+/* ========== CENTRE D'INTEREÊT ========== */
+.interests ul {
+  list-style: none;
+  margin-bottom: 15px;
+}
+
+.interests li::before {
+  content: "• ";
+  color: #38bdf8;
+}
+
+
 /* ========== RÉSEAUX SOCIAUX ========== */
 
 .social-icons {
@@ -299,3 +311,4 @@ section h2 {
     margin: 0 auto;
   }
 }
+
