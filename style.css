@@ -8,8 +8,8 @@
 
 body {
   font-family: Arial, sans-serif;
-  background: #0f172a;
-  color: #e5e7eb;
+  background: #0f172a;         /* bleu foncé */
+  color: #e5e7eb;              /* gris très clair */
 }
 
 a {
@@ -29,13 +29,13 @@ header {
   top: 0;
   background: rgba(15, 23, 42, 0.98);
   backdrop-filter: blur(8px);
-   z-index: 1000;
+   z-index: 1000; /* passe au-dessus des sections */
 }
 
 .logo {
   font-size: 24px;
   font-weight: bold;
-  color: #38bdf8;
+  color: #38bdf8; /* bleu clair */
 }
 
 nav a {
@@ -131,46 +131,257 @@ section h2 {
 }
 
 
-/* ========== PROJETS ========== */
-
-.projects .project {
-  background: #020617;
-  border-radius: 8px;
-  padding: 20px;
-  margin-bottom: 15px;
-  border: 1px solid #1e293b;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s;
+/* ========= A PROPOS DE MOI ============ */
+.about {
+  padding: 60px 8%;
 }
 
-.projects .project:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.8);
+.about h2 {
+  font-size: 24px;
+  color: #38bdf8;
+  margin-bottom: 20px;
+}
+
+.about-card {
+  background: #020617;
+  border-radius: 16px;
+  padding: 20px 20px 22px;
+  border: 1px solid #1e293b;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.45);
+  max-width: 700px;
+  line-height: 1.7;
+  color: #e5e7eb;
+  transition: transform 0.2s ease,
+              box-shadow 0.2s ease,
+              border-color 0.2s;
+}
+
+.about-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.6);
   border-color: #38bdf8;
 }
 
 
+
+/* ========== PROJETS ========== */
+
+.projects {
+  padding: 60px 8%;
+}
+
+.projects h2 {
+  font-size: 24px;
+  color: #38bdf8;
+  margin-bottom: 25px;
+}
+
+/* grille responsive (comme loisirs) */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* carte projet */
+.project {
+  background: #020617;
+  border-radius: 12px;
+  padding: 18px 16px 20px;
+  border: 1px solid #1e293b;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s ease,
+              box-shadow 0.2s ease,
+              border-color 0.2s;
+}
+
+.project:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.6);
+  border-color: #38bdf8;
+}
+
+.project h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.project p {
+  font-size: 14px;
+  color: #e5e7eb;
+  margin-bottom: 6px;
+}
+
+
+
 /* ========== COMPÉTENCES ========== */
 
-.skills ul {
-  list-style: none;
-  margin-bottom: 15px;
+.skills {
+  padding: 60px 8%;
 }
 
-.skills li::before {
+.skills h2 {
+  font-size: 24px;
+  color: #38bdf8;
+  margin-bottom: 25px;
+}
+
+/* grille 2 colonnes */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* carte de compétences */
+.skill-card {
+  background: #020617;
+  border-radius: 12px;
+  padding: 18px 18px 20px;
+  border: 1px solid #1e293b;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s;
+}
+
+.skill-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.6);
+  border-color: #38bdf8;
+}
+
+.skill-card h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.skill-card ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.skill-card li {
+  font-size: 14px;
+  color: #e5e7eb;
+  margin-bottom: 6px;
+}
+
+.skill-card li::before {
   content: "• ";
   color: #38bdf8;
 }
 
 
-/* ========== CENTRE D'INTEREÊT ========== */
-.interests ul {
-  list-style: none;
-  margin-bottom: 15px;
+
+/* ========== LOISIRS ========== */
+.loisirs {
+  padding: 60px 8%;
 }
 
-.interests li::before {
-  content: "• ";
+.loisirs h2 {
+  font-size: 24px;
   color: #38bdf8;
+  margin-bottom: 25px;
+}
+
+/* grille responsive de cartes */
+.loisirs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+}
+
+/* carte individuelle */
+.loisir-card {
+  background: #020617;
+  border-radius: 12px;
+  padding: 18px 16px;
+  border: 1px solid #1e293b;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s;
+}
+
+.loisir-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.6);
+  border-color: #38bdf8;
+}
+
+/* icône ronde */
+.loisir-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 10px;
+  border-radius: 999px;
+  background: rgba(56, 189, 248, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #38bdf8;
+  font-size: 22px;
+}
+
+.loisir-card h3 {
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+
+.loisir-card p {
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+
+/* ========== EXPERIENCE =========== */
+.experience {
+  padding: 60px 8%;
+}
+
+.experience h2 {
+  font-size: 24px;
+  color: #38bdf8;
+  margin-bottom: 20px;
+}
+
+.experience-card {
+  background: #020617;
+  border-radius: 16px;
+  padding: 18px 18px 20px;
+  border: 1px solid #1e293b;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.45);
+  max-width: 700px;
+  position: relative;
+   transition: transform 0.2s ease,
+              box-shadow 0.2s ease,
+              border-color 0.2s;   /* ajoute la transition ici */
+}
+
+/* effet au survol */
+.experience-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.6);
+  border-color: #38bdf8;
+}
+
+/* petit badge pour les dates */
+.exp-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(56, 189, 248, 0.15);
+  color: #38bdf8;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.experience-card h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.experience-card p {
+  font-size: 14px;
+  color: #e5e7eb;
 }
 
 
@@ -202,36 +413,130 @@ section h2 {
 }
 
 
-/* ========== CONTACT ========== */
+/* ===== SECTION CONTACT EN 2 COLONNES ===== */
 
 .contact {
   padding: 60px 8%;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr);
+  gap: 40px;
+  align-items: center;
 }
 
-.contact p {
-  margin-bottom: 20px;
-  font-size: 14px;
+/* COLONNE GAUCHE : TEXTE + CARTES */
+
+.contact-left h2 {
+  font-size: 26px;
+  margin-bottom: 15px;
 }
+
+.contact-left p {
+  font-size: 14px;
+  color: #9ca3af;
+  max-width: 380px;
+  margin-bottom: 25px;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #020617;
+  border-radius: 12px;
+  padding: 15px 18px;
+  margin-bottom: 15px;
+  border: 1px solid #1e293b;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
+  transition: transform 0.2s ease,
+              box-shadow 0.2s ease,
+              border-color 0.2s;
+}
+
+.contact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.6);
+  border-color: #38bdf8;
+}
+
+.contact-card .icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  background: rgba(56, 189, 248, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #38bdf8;
+  font-size: 18px;
+}
+
+.contact-card .text h3 {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #6b7280;
+  margin-bottom: 3px;
+}
+
+.contact-card .text p {
+  font-size: 14px;
+  color: #e5e7eb;
+}
+
+/* COLONNE DROITE : GROSSE CARTE FORMULAIRE */
+
+.contact-right .contact-box {
+  background: #020617;
+  border-radius: 18px;
+  padding: 25px 25px 30px;
+  border: 1px solid #1e293b;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Formulaire */
 
 .contact-form {
-  max-width: 400px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 18px;
+}
+
+.contact-form .row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.contact-form .field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .contact-form label {
-  font-size: 14px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #e5e7eb;
 }
 
 .contact-form input,
 .contact-form textarea {
-  padding: 8px 10px;
-  border-radius: 4px;
-  border: 1px solid #1e293b;
+  padding: 10px 12px;
+  border-radius: 999px;
+  border: 1px solid #111827;
   background: #020617;
   color: #e5e7eb;
   font-size: 14px;
+}
+
+.contact-form textarea {
+  border-radius: 12px;   /* pour que le textarea ressemble à l’exemple */
+  resize: vertical;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #6b7280;
 }
 
 .contact-form input:focus,
@@ -240,21 +545,47 @@ section h2 {
   border-color: #38bdf8;
 }
 
-.contact-form button {
+/* Bouton bleu large */
+
+.contact-btn {
   margin-top: 10px;
-  padding: 10px;
+  width: 100%;
+  padding: 12px;
+  border-radius: 999px;
   border: none;
-  border-radius: 4px;
   background: #38bdf8;
   color: #0f172a;
-  font-weight: bold;
+  font-weight: 600;
+  font-size: 14px;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background 0.3s, transform 0.1s, box-shadow 0.3s;
+  box-shadow: 0 10px 25px rgba(56, 189, 248, 0.5);
 }
 
-.contact-form button:hover {
+.contact-btn:hover {
   background: #0ea5e9;
 }
+
+.contact-btn:active {
+  transform: translateY(1px);
+}
+
+/* Responsive : une colonne sur mobile */
+
+@media (max-width: 768px) {
+  .contact {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-right .contact-box {
+    margin-top: 10px;
+  }
+
+  .contact-form .row {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 
 /* ========== FOOTER ========== */
@@ -263,7 +594,7 @@ section h2 {
   margin-top: 40px;
   padding: 20px 8%;
   text-align: center;
-  background: #020617;
+  background: #020617;   /* un peu plus sombre que le reste */
   color: #9ca3af;
   font-size: 13px;
   border-top: 1px solid #1e293b;
