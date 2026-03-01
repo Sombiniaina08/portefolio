@@ -8,8 +8,8 @@
 
 body {
   font-family: Arial, sans-serif;
-  background: #0f172a;         /* bleu foncé */
-  color: #e5e7eb;              /* gris très clair */
+  background: #0f172a;
+  color: #e5e7eb;
 }
 
 a {
@@ -29,7 +29,7 @@ header {
   top: 0;
   background: rgba(15, 23, 42, 0.98);
   backdrop-filter: blur(8px);
-   z-index: 1000; /* passe au-dessus des sections */
+   z-index: 1000;
 }
 
 .logo {
@@ -176,14 +176,12 @@ section h2 {
   margin-bottom: 25px;
 }
 
-/* grille responsive (comme loisirs) */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
 }
 
-/* carte projet */
 .project {
   background: #020617;
   border-radius: 12px;
@@ -226,14 +224,12 @@ section h2 {
   margin-bottom: 25px;
 }
 
-/* grille 2 colonnes */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
 }
 
-/* carte de compétences */
 .skill-card {
   background: #020617;
   border-radius: 12px;
@@ -283,14 +279,12 @@ section h2 {
   margin-bottom: 25px;
 }
 
-/* grille responsive de cartes */
 .loisirs-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 20px;
 }
 
-/* carte individuelle */
 .loisir-card {
   background: #020617;
   border-radius: 12px;
@@ -353,17 +347,15 @@ section h2 {
   position: relative;
    transition: transform 0.2s ease,
               box-shadow 0.2s ease,
-              border-color 0.2s;   /* ajoute la transition ici */
+              border-color 0.2s;
 }
 
-/* effet au survol */
 .experience-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 14px 30px rgba(0, 0, 0, 0.6);
   border-color: #38bdf8;
 }
 
-/* petit badge pour les dates */
 .exp-badge {
   display: inline-block;
   padding: 4px 10px;
@@ -423,8 +415,6 @@ section h2 {
   align-items: center;
 }
 
-/* COLONNE GAUCHE : TEXTE + CARTES */
-
 .contact-left h2 {
   font-size: 26px;
   margin-bottom: 15px;
@@ -483,8 +473,6 @@ section h2 {
   color: #e5e7eb;
 }
 
-/* COLONNE DROITE : GROSSE CARTE FORMULAIRE */
-
 .contact-right .contact-box {
   background: #020617;
   border-radius: 18px;
@@ -492,8 +480,6 @@ section h2 {
   border: 1px solid #1e293b;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
 }
-
-/* Formulaire */
 
 .contact-form {
   display: flex;
@@ -530,7 +516,7 @@ section h2 {
 }
 
 .contact-form textarea {
-  border-radius: 12px;   /* pour que le textarea ressemble à l’exemple */
+  border-radius: 12px;
   resize: vertical;
 }
 
@@ -594,7 +580,7 @@ section h2 {
   margin-top: 40px;
   padding: 20px 8%;
   text-align: center;
-  background: #020617;   /* un peu plus sombre que le reste */
+  background: #020617;
   color: #9ca3af;
   font-size: 13px;
   border-top: 1px solid #1e293b;
@@ -642,4 +628,5 @@ section h2 {
     margin: 0 auto;
   }
 }
+
 
