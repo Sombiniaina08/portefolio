@@ -630,3 +630,95 @@ section h2 {
 }
 
 
+/*==== menu  burger ==== */
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  display: none; 
+  cursor: pointer;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #e5e7eb;
+  border-radius: 999px;
+  position: relative;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.nav-toggle-label span::before {
+  top: -6px;
+}
+
+.nav-toggle-label span::after {
+  top: 6px;
+}
+
+
+@media (max-width: 768px) {
+  header {
+    padding: 12px 6%;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: #020617;
+    display: none;
+    flex-direction: column;
+    padding: 15px 6%;
+    gap: 10px;
+    border-bottom: 1px solid #1e293b;
+  }
+
+  nav a {
+    margin: 0;
+    padding: 8px 0;
+  }
+
+  .nav-toggle-label {
+    display: block;
+  }
+
+  .nav-toggle:checked ~ nav {
+    display: flex;
+  }
+
+  .nav-toggle:checked + .nav-toggle-label span {
+    transform: rotate(45deg);
+  }
+
+  .nav-toggle:checked + .nav-toggle-label span::before {
+    transform: rotate(-90deg);
+    top: 0;
+  }
+
+  .nav-toggle:checked + .nav-toggle-label span::after {
+    opacity: 0;
+  }
+}
+
+
+
+
